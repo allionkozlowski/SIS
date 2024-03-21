@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class AddAndDelete {
 	static Scanner userIntInput = new Scanner(System.in);
-	static Scanner scanner = new Scanner(System.in);
 	public static void run() throws IOException
 	{
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Do you want to (1) add, or (2) delete a student?");
 		int answer = scanner.nextInt();
 		if(answer == 1) {
@@ -19,6 +19,7 @@ public class AddAndDelete {
 
 public static void add() throws IOException
 {
+	Scanner scanner = new Scanner(System.in);
 	System.out.println("What is the first name?");
 	String first = scanner.nextLine();
 	System.out.println("What is the last name?");
@@ -41,6 +42,7 @@ public static void add() throws IOException
 	PrintStudentNames.display();
 }
 public static void delete() throws IOException{
+	Scanner scanner = new Scanner(System.in);
 	System.out.println("What student would you like to delete");
 	PrintStudentNames.display();
 	int gone = scanner.nextInt() -1;
