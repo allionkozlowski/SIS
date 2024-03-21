@@ -1,10 +1,11 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 
 public class AddAndDelete {
 	static Scanner userIntInput = new Scanner(System.in);
 	static Scanner scanner = new Scanner(System.in);
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
 		System.out.println("Do you want to (1) add, or (2) delete a student?");
 		int answer = scanner.nextInt();
 		if(answer == 1) {
@@ -36,7 +37,11 @@ public static void add(){
 	
 	StudentList.studentList.add( new Student(first, last, gpa, class1, grade1, class2, grade2, class3, grade3));
 }
-public static void delete() {
-	
+public static void delete() throws IOException{
+	System.out.println("What student would you like to delete");
+	PrintStudentNames.display();
+	int gone = scanner.nextInt() -1;
+	StudentList.studentList.remove(gone);
+	PrintStudentNames.display();
 }
 }
