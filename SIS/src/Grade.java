@@ -1,5 +1,6 @@
 import java.util.Scanner; 
 import java.io.IOException;
+import java.text.DecimalFormat;
 import java.io.File;
 public class Grade
 	{
@@ -10,13 +11,14 @@ public class Grade
 				Scanner scanner = new Scanner(System.in);
 				System.out.println("What is the number of the student you are trying to update?");
 				PrintStudentNames.display();
-				int number = scanner.nextInt();
+				int number1 = scanner.nextInt();
 				System.out.println("Is it the students (1)first class, (2)second class, or (3)third class?");
 				int classPeriod = scanner.nextInt();
+				Scanner scanner1 = new Scanner(System.in);
 				System.out.println("What do you want to change the grade to?");
-				String newGrade = scanner.nextLine();
-				changeGrade(number,classPeriod,newGrade);
-				
+				String newGrade = scanner1.nextLine();
+				changeGrade(number1,classPeriod,newGrade);
+				PrintStudentNames.display();
 				
 			}
 		public static void changeGrade(int num, int period, String grade)throws IOException
@@ -24,6 +26,7 @@ public class Grade
 			if(period==1)
 			{
 				StudentList.studentList.get(num).setFirstGrade(grade);
+				System.out.println(StudentList.studentList.get(num).getFirstGrade());
 			}
 			else if(period==2)
 			{
@@ -33,7 +36,7 @@ public class Grade
 			{
 				StudentList.studentList.get(num).setThirdGrade(grade);
 			}
-			PrintStudentNames.display();
+			
 			
 		}
 //				public static changeGrade( int number, int classPeriod, String newGrade)
