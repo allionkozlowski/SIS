@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class AddAndDelete {
 	static Scanner userIntInput = new Scanner(System.in);
 	static Scanner scanner = new Scanner(System.in);
-	public static void main(String[] args) throws IOException{
+	public static void run() throws IOException
+	{
 		System.out.println("Do you want to (1) add, or (2) delete a student?");
 		int answer = scanner.nextInt();
 		if(answer == 1) {
@@ -16,11 +17,12 @@ public class AddAndDelete {
 	}
 
 
-public static void add(){
-	System.out.println("What is the first name of the student you would like to add?");
+public static void add() throws IOException
+{
+	System.out.println("What is the first name?");
 	String first = scanner.nextLine();
-	System.out.println("What is the last name of the student you would to add?");		
-	String last= scanner.nextLine();
+	System.out.println("What is the last name?");
+	String last = scanner.nextLine();
 	System.out.println("What is the student's first class?");
 	String class1 = scanner.nextLine();
 	System.out.println("What is their grade in that class?");
@@ -33,9 +35,10 @@ public static void add(){
 	String class3= scanner.nextLine();
 	System.out.println("What is thier grade in that class?");
 	String grade3 = scanner.nextLine();
-	double gpa = 4.0;
+	double gpa = Double.parseDouble(StudentList.getGPA(grade1, grade2, grade3));
 	
 	StudentList.studentList.add( new Student(first, last, gpa, class1, grade1, class2, grade2, class3, grade3));
+	PrintStudentNames.display();
 }
 public static void delete() throws IOException{
 	System.out.println("What student would you like to delete");

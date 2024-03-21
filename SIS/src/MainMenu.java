@@ -6,7 +6,7 @@ public class MainMenu {
 
 	public static void main(String[] args) throws IOException
 	{
-
+		StudentList.fillArray();
 		System.out.println("What you you like to do?");
 		System.out.println("1) add or delete a student");
 		System.out.println("2) change student grades/schedule");
@@ -16,7 +16,7 @@ public class MainMenu {
  
 		if(option == 1)
 		{
-			System.out.println(1);
+			AddAndDelete.run();
 		}
 		else if(option == 2)
 		{
