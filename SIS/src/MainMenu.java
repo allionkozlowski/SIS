@@ -1,8 +1,12 @@
+import java.io.IOException;
 import java.util.Scanner;
+import java.io.IOException;
 
 public class MainMenu {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException
+	{
+
 		System.out.println("What you you like to do?");
 		System.out.println("1) add or delete a student");
 		System.out.println("2) change student grades/schedule");
@@ -16,7 +20,7 @@ public class MainMenu {
 		}
 		else if(option == 2)
 		{
-			System.out.println(2);
+			Grade.change();
 		}
 		else if(option == 3)
 		{
