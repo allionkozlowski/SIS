@@ -17,12 +17,12 @@ public class Sort {
 		if(option == 1)
 		{
 			Collections.sort(StudentList.studentList, new NameSorter());
-			PrintStudentNames.display2();
+			PrintStudentNames.display();
 		}
 		else if(option == 2)
 		{
 			Collections.sort(StudentList.studentList, new GPASorter());
-			PrintStudentNames.display2();
+			PrintStudentNames.display();
 		}
 		else if(option == 3)
 		{
@@ -41,7 +41,7 @@ public class Sort {
 			{
 				Collections.sort(StudentList.studentList, new PeriodThreeSorter());
 			}
-			PrintStudentNames.display2();
+			PrintStudentNames.display();
 		}
 	}
 	

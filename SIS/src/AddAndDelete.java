@@ -29,11 +29,11 @@ public static void add() throws IOException
 	String grade1= scanner.nextLine();
 	System.out.println("What is the student's second class?");
 	String class2=scanner.nextLine();
-	System.out.println("What is thier grade in that class?");
+	System.out.println("What is their grade in that class?");
 	String grade2 =scanner.nextLine();
 	System.out.println("What is the student's third class?");
 	String class3= scanner.nextLine();
-	System.out.println("What is thier grade in that class?");
+	System.out.println("What is their grade in that class?");
 	String grade3 = scanner.nextLine();
 	double gpa = Double.parseDouble(StudentList.getGPA(grade1, grade2, grade3));
 	

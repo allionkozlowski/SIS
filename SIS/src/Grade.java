@@ -9,7 +9,6 @@ public class Grade
 				
 				Scanner scanner = new Scanner(System.in);
 				System.out.println("What is the number of the student you are trying to update?");
-				System.out.println();
 				PrintStudentNames.display();
 				int number = scanner.nextInt();
 				System.out.println("Is it the students (1)first class, (2)second class, or (3)third class?");

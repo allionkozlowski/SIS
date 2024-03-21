@@ -6,7 +6,10 @@ public class MainMenu {
 
 	public static void main(String[] args) throws IOException
 	{
+		boolean continueChanging = true;
 		StudentList.fillArray();
+		while(continueChanging)
+		{
 		System.out.println("What you you like to do?");
 		System.out.println("1) add or delete a student");
 		System.out.println("2) change student grades/schedule");
@@ -26,6 +29,16 @@ public class MainMenu {
 		{
 			Sort.run();
 		}
+		
+		System.out.println();
+		System.out.println("Do you want to continue changing the roster (1)yes and (2)no?");
+		int cont = userInput.nextInt();
+		if(cont==2)
+		{
+			continueChanging = false;
+		}
+		}
+		
 
 	}
 
