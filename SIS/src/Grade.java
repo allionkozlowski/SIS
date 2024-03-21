@@ -25,40 +25,19 @@ public class Grade
 		{
 			if(period==1)
 			{
-				StudentList.studentList.get(num).setFirstGrade(grade);
-				System.out.println(StudentList.studentList.get(num).getFirstGrade());
+				StudentList.studentList.get(num-1).setFirstGrade(grade);
 			}
 			else if(period==2)
 			{
-				StudentList.studentList.get(num).setSecondGrade(grade);
+				StudentList.studentList.get(num-1).setSecondGrade(grade);
 			}
 			else
 			{
-				StudentList.studentList.get(num).setThirdGrade(grade);
+				StudentList.studentList.get(num-1).setThirdGrade(grade);
 			}
-			
-			
+				
 		}
-//				public static changeGrade( int number, int classPeriod, String newGrade)
-//				{
-//					//for(int i = 0; i < StudentList.studentList.get())
-//					//
-//					if(StudentList.getFirstClass.equals(firstClass))
-//						{
-//							studentList.setFirstGrade(newGrade);
-//						}
-//					else if(StudentList.getSecondClass.equals(secondClass))
-//						{
-//							studentList.setSecondGrade(newGrade);
-//						}
-//					else if(StudentList.getThirdClass.equals(thirdClass))
-//						{
-//							studentList.setThirdGrade(newGrade);
-//						}
-//					
-//					System.out.println(firstName + lastName + "'s grade has been changed.");
-//
-//				}
+
 				
 
 	}

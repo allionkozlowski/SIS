@@ -23,7 +23,18 @@ public class MainMenu {
 		}
 		else if(option == 2)
 		{
-			Grade.change();
+			System.out.println("Would you like to change (1)grades or (2)schedule?");
+			Scanner userInput1 = new Scanner(System.in);
+			int option1 = userInput1.nextInt();
+			if(option1==1)
+			{
+				Grade.change();
+			}
+			else
+			{
+				SwitchClass.switchClass();
+			}
+			
 		}
 		else if(option == 3)
 		{
