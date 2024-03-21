@@ -20,7 +20,7 @@ public class MainMenu {
 		}
 		else if(option == 2)
 		{
-			System.out.println(2);
+			Grade.change();
 		}
 		else if(option == 3)
 		{
